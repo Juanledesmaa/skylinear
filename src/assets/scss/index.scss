@@ -1,0 +1,45 @@
+// Import our variables to override Bootstraps default ones
+@import './variables';
+
+// Bootstrap Core
+// --------------------------------------------------
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+@import '../../../node_modules/font-awesome/scss/font-awesome';
+
+
+
+// Or import only what you need to keep your vendor bundle small
+// See '../../../node_modules/bootstrap/scss/bootstrap' for available files
+// @import 'functions';
+// @import 'variables';
+// @import 'mixins';
+// @import 'root';
+// @import 'reboot';
+// @import 'type';
+// @import 'images';
+// @import 'code';
+
+/**
+ * --------------------------------------------------
+ * Here begins our own CSS in the rendered CSS file.
+ */
+
+// Theme
+// --------------------------------------------------
+@import './theme';
+@import "./colors";
+@import "./fonts";
+@import './general';
+@import "./navbar";
+@import "./main-banners";
+@import "./about-us";
+@import "./buy-at-skyline";
+@import "./carousel-section";
+
+// Print Styles
+// --------------------------------------------------
+// Use this file to reduce ink an optimize the readability and accessibility of the pages.
+// @import './print';
+
+////////// Do NOT insert style-definitions here! //////////
