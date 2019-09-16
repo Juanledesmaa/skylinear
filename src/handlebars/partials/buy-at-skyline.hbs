@@ -1,0 +1,33 @@
+<section id="buy-at-skyline">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <div class="title">
+                        <h2>Comprar en skyline es asi de fácil</h2>
+                        <span class="divisor"></span>
+                    </div>
+                    <div class="items">
+                      <div class="row">
+                        {{#each itemSkyline}}
+                        <div class="col-3 item">
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="item-image-container">
+                                        <img src="{{ itemImg }}" class="rounded-circle img-fluid" alt=""/>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <h5 class="default-subtitle">{{ itemTitle }}</h5>
+                                    <p class="font600">{{ itemDescription }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                      </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,24 @@
+#about-us {
+    margin-top: 30px;
+
+    .title {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: column; 
+        margin-bottom: 30px;
+
+        h2 {
+            text-align: center;
+            width: 50%;
+        }
+
+        .divisor {
+            width: 60%;
+            height: 5px;
+            background-color: $color-default-blue;
+            border-radius: 5px;
+            max-width: 450px;
+        }
+    }
+}

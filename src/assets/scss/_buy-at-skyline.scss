@@ -1,0 +1,40 @@
+#buy-at-skyline {
+    margin-top: 30px;
+
+    .title {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: column; 
+        margin-bottom: 30px;
+
+        h2 {
+            text-align: center;
+            width: 50%;
+        }
+
+        .divisor {
+            width: 60%;
+            height: 5px;
+            background-color: $color-default-blue;
+            border-radius: 5px;
+            max-width: 450px;
+        }
+    }
+
+    .items {
+        margin-top: 20px;
+
+        .item {
+            margin-bottom: 20px;
+
+            h5 {
+                margin-bottom: 0;
+            }
+
+            .font600 {
+                line-height: 1.2rem;
+            }
+        }
+    }
+}

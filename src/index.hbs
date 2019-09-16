@@ -1,0 +1,33 @@
+---
+home: active
+
+itemSkyline: [
+{itemImg: "/assets/img/contanos.png", itemTitle: "Contanós que necesitás", itemDescription: 'Elegí el/los articulos de tu preferencia y clickea "Añadir a mi cotizacion"'},
+{itemImg: "/assets/img/contanos.png", itemTitle: "Envió de cotización", itemDescription: "Nuestros ejecutivos de venta te enviaran la cotización solicitada a un mail con los precios, plazos de entrega y forma de pago"},
+{itemImg: "/assets/img/contanos.png", itemTitle: "Confirmación de compra", itemDescription: "Una vez confirmada la compra, procedemos al armado de bocetos digitales para aprobación y produccion del mismo."},
+{itemImg: "/assets/img/contanos.png", itemTitle: "Entrega", itemDescription: "Puedes retirar o realizamos la entrega de tu pedido en los plazos definidos"}
+]
+---
+	{{> navbar }}
+
+	{{!-- begin: content container --}}
+	<main class="container">
+		<div class="main-content">
+			{{!-- begin: content --}}
+			{{> main-banners }}
+			{{> about-us }}
+			{{!-- end: content --}}
+		</div>
+	</main>
+
+	<div class="sub-content">
+		<div class="custom-container">
+			{{> buy-at-skyline }}
+		</div>
+	</div>
+
+	<div class="container">
+		{{> carousel-section }}
+		{{> footer }}
+	</div>
+	{{!-- end: content container --}}
