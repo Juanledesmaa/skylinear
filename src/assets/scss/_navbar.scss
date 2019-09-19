@@ -10,7 +10,7 @@
         position: relative;
         text-align: right;
         padding: 15px 0 15px;
-        background: #1d1c21;
+        background: $color-default-darkgray;
 
         .phone-block {
             line-height: 40px;
@@ -157,9 +157,31 @@
     }
 }
 
+// TODO
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $color-default-darkgray;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #F6F6F6;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    padding: 0;
+    background-color: $color-default-blue;
+
+    .nav-link {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
 .overlay, .sideMenu {
 	position: fixed;
-	bottom: 0
+	bottom: 0;
 }
 
 .overlay {
@@ -167,7 +189,7 @@
 	left: -100%;
 	right: 100%;
 	margin: auto;
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(0, 0, 0, 0.5);
 	z-index: 998;
 	transition: all ease 0.2s
 }
@@ -209,4 +231,73 @@
 .sideMenu ul {
 	margin: 0;
 	padding: 0 15px
+}
+
+
+
+.kolonat-hom {
+    padding: 0;
+
+    .ikonat-home {
+        display: inline-block;
+        text-align: left;
+    }
+
+    #text {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    #text, #ico {
+        line-height: 50px;
+    }
+    
+    #ico {
+        vertical-align: middle;
+        font-size: 18px;
+        margin-right: 10px;
+        color: $color-default-blue;
+    }
+}
+
+.bardhe {
+    ul {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        display: block;
+        flex: 0 1 auto;
+        list-style-type: none;
+        margin-right: 20px;
+
+        #text, #ico {
+            line-height: 30px;
+        }
+
+        .fa {
+            vertical-align: top;
+            font-size: 18px;
+            margin-right: 5px;
+            color: $color-default-blue;
+        }
+
+        #text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
 }

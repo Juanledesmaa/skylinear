@@ -1,0 +1,16 @@
+{
+  "generator-baumeister": {
+    "promptValues": {
+      "projectType": "staticSite",
+      "boilerplateAmount": "little",
+      "license": "MIT",
+      "authorName": "Juan Ledesma",
+      "authorUrl": "skyline.com.ar",
+      "initialVersion": "0.0.0",
+      "additionalInfo": true,
+      "authorMail": "umbranito@gmail.com",
+      "banners": false,
+      "addDistToVersionControl": false
+    }
+  }
+}
