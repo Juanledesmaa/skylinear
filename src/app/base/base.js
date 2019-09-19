@@ -62,20 +62,20 @@ export function consoleErrorFix() {
 }
 
 export function setupCarousel() {
-  $('#carousel-example').on('slide.bs.carousel', function (e) {
+  $('.primary-banner #carousel-example').on('slide.bs.carousel', function (e) {
     const $e = $(e.relatedTarget);
     const idx = $e.index();
     const itemsPerSlide = 5;
-    const totalItems = $('.carousel-item').length;
+    const totalItems = $('.primary-banner .carousel-item').length;
 
     if (idx >= totalItems-(itemsPerSlide-1)) {
         const it = itemsPerSlide - (totalItems - idx);
         for (let i = 0; i < it; i++) {
             if (e.direction === "left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                $('.primary-banner .carousel-item').eq(i).appendTo('.carousel-inner');
             }
             else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                $('.primary-banner .carousel-item').eq(0).appendTo('.carousel-inner');
             }
         }
     }
@@ -109,6 +109,10 @@ export function setupNavbar() {
 
 export function setupMainBannerCarousel() {
   $('#myCarousel').carousel({
-    interval: 30000
+    interval: 30000000
  });
+
+ $('#carousel-example').carousel({
+  interval: 30000000
+});
 }
