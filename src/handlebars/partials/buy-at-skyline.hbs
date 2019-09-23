@@ -10,18 +10,12 @@
                     <div class="items">
                       <div class="row">
                         {{#each itemSkyline}}
-                        <div class="col-3 item">
-                            <div class="row">
-                                <div class="col-5">
-                                    <div class="item-image-container">
-                                        <img src="{{ itemImg }}" class="rounded-circle img-fluid" alt=""/>
-                                    </div>
-                                </div>
-                                <div class="col-7">
-                                    <h5 class="default-subtitle">{{ itemTitle }}</h5>
-                                    <p class="font600">{{ itemDescription }}</p>
-                                </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3 item">
+                            <div class="item-image-container">
+                                <img src="{{ itemImg }}" class="rounded-circle img-fluid img-responsive" alt=""/>
                             </div>
+                            <h5 class="default-subtitle">{{ itemTitle }}</h5>
+                            <p>{{ itemDescription }}</p>
                         </div>
                         {{/each}}
                       </div>  
