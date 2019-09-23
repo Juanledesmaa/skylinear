@@ -1,5 +1,5 @@
 #buy-at-skyline {
-    margin-top: 30px;
+    margin-top: 50px;
 
     .title {
         align-items: center;
@@ -26,14 +26,27 @@
         margin-top: 20px;
 
         .item {
-            margin-bottom: 20px;
+            margin-bottom: 50px;
 
             h5 {
-                margin-bottom: 0;
+                text-align: center;
+                text-transform: uppercase;
+                min-height: 45px;
+                margin-top: 20px;
             }
 
-            .font600 {
-                line-height: 1.2rem;
+            p {
+                text-align: center;
+                font-weight: 500;
+            }
+        }
+
+        .item-image-container {
+            img {
+                max-height: 120px;
+                margin: 0 auto;
+                display: block;
+                width: auto;
             }
         }
     }

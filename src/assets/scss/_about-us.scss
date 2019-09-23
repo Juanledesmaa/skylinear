@@ -6,7 +6,7 @@
         justify-content: center;
         display: flex;
         flex-flow: column; 
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         h2 {
             text-align: center;
@@ -19,6 +19,17 @@
             background-color: $color-default-blue;
             border-radius: 5px;
             max-width: 450px;
+        }
+    }
+
+    .about-p {
+        .paragraph {
+            font-weight: 500;
+
+            b {
+                text-transform: uppercase;
+                color: $color-default-blue;
+            }
         }
     }
 }

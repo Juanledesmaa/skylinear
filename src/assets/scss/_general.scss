@@ -1,8 +1,7 @@
 body {
 	padding-top: 0;
 	color: #fff;
-    font-family: "calibri", sans-serif;
-    font-family: "Nunito Sans", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: $background-gray;
 }
@@ -57,12 +56,23 @@ p {
     padding: 0;
 }
 
-.sub-content {
-    .custom-container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
+.mt-40 {
+    margin-top: 40px;
+}
+
+.btn-wrapper {
+    .btn-main {
+        background-color: $color-default-blue;
+        border-radius: 30px;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 8px 28px;
+        margin-right: 10px;
+
+        &:hover {
+            color: #fff;
+            transition: all 0.3s ease 0s;
+            background-color: $color-default-darkgray;
+        }
     }
 }
