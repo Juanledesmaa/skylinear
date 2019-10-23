@@ -172,10 +172,86 @@
     padding: 0;
     background-color: $color-default-blue;
 
+    .navbar-brand {
+        padding: 0;
+
+        img {
+            object-fit: cover;
+            height: 55px;
+        }
+    }
+
+    .sign {
+        height: 60px;
+        width: 60px;
+        background: #1d1c21;
+        position: relative;
+
+        img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            bottom: 5px;
+            left: 7px;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all ease-in-out 0.3s;
+            }
+        }
+
+        &::after {
+            content: '';
+            position:absolute;
+            height: 0;
+            width: 0;
+            margin-top: 60px;
+            border-right: 30px solid transparent;
+            border-bottom: 8px solid transparent; 
+            border-left: 30px solid #1d1c21; 
+        }
+
+        &::before {
+            content: '';
+            position:absolute;
+            height: 0;
+            width: 0;
+            margin-top: 60px;
+            border-right: 30px solid transparent;
+            border-bottom: 8px solid transparent; 
+            border-left: 30px solid #1d1c21;
+            transform: rotateY(180deg);
+          }
+      }
+
     .nav-link {
         color: white;
         font-size: 18px;
         font-weight: 500;
+
+    }
+
+    .dropdown-menu {
+        float: left;
+        border: 5px solid #f0f0f2;
+        padding: 10px 15px;
+        height: 0;
+        margin-top: 20px;
+        border-radius: 0;
+        overflow: hidden;
+        -webkit-transition: height 0.5s; 
+        transition: height 0.5s;
+        opacity: 0;
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: $color-default-blue;
+            text-decoration: none;
+            background-color: transparent;
+            transition: all ease 0.3s;
+            cursor: pointer;
+
+        }
     }
 }
 
@@ -233,8 +309,6 @@
 	padding: 0 15px
 }
 
-
-
 .kolonat-hom {
     padding: 0;
 
@@ -266,7 +340,6 @@
         align-items: stretch;
         justify-content: flex-end;
         width: 100%;
-
         margin: 0;
         padding: 0;
     }
@@ -297,7 +370,21 @@
 
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+        padding-bottom: 25px;
+        padding-top: 25px;
     }
 }
+
+@media (min-width: 979px) {
+    ul.nav .nav-item:hover > .dropdown-menu {
+      display: block;
+      max-height: 1000px;
+      height: auto !important;
+      -webkit-transition: height 0.5s; 
+      transition: height 0.5s;
+      opacity: 1;
+      margin-top: 0;
+    }
+  }

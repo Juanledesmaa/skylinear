@@ -12,6 +12,21 @@
             overflow: hidden;
             position: relative;
             height: 100%;
+
+            .carousel-indicators {
+                margin: 0;
+                position: absolute;
+                right: initial;
+                bottom: 30px;
+                left: 30px;
+
+                li {
+                    background-color: $color-default-blue;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                }
+            }
         }
 
         #myCarousel .carousel-item .mask {
@@ -97,6 +112,31 @@
         #myCarousel .carousel-item {
             height: 100%;
             min-height: 411px;
+
+            .main-title {
+                color: $color-default-gray !important;
+                text-align: left;
+                font-size: 22px !important;
+                margin-bottom: 40px;
+            }
+
+            .sub-title {
+                margin-bottom: 30px;
+            }
+
+            .divisor {
+                width: 56%;
+                height: 5px;
+                background-color: $color-default-blue;
+                border-radius: 5px;
+                max-width: 450px;
+                display: block;
+                margin-bottom: 40px;
+            }
+
+            .discount {
+                color: $color-default-blue;
+            }
         }
         
         #myCarousel {

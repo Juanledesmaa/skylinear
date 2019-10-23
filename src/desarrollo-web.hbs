@@ -1,0 +1,25 @@
+---
+active: { servicios: true }
+
+banner: { title: "Desarrollo Web", description: "Diseño de páginas Web para empresas y profesionales de primer nivel.", imageUrl: "/assets/img/banner_desarrollo_web.jpg" }
+---
+	{{> navbar }}
+
+	<div class="desarrollo-web">
+		<div class="container-fluid">
+			{{> banner-content }}	
+		</div>
+		{{!-- begin: content container --}}
+		<main class="container">
+			<div class="main-content">
+				{{!-- begin: content --}}
+				{{> about-section-web }}
+
+				{{> carousel-web }}
+				{{!-- end: content --}}
+			</div>
+		</main>
+	</div>
+	{{!-- end: content container --}}
+
+	{{> footer }}
