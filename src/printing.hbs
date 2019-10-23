@@ -1,27 +1,34 @@
 ---
 
+active: { servicios: true }
+
+banner: { title: "Impresiones", description: "En SKYLINE producimos un amplio rango de impresiones digitales y trabajamos con las mejores maquinas del mercado", imageUrl: "/assets/img/banner_impresiones_plotter.jpg" }
 
 ---
 	{{> navbar }}
 
-	<div class="container-fluid">
-		{{> banner-content }}	
-	</div>
-	{{!-- begin: content container --}}
-	<main class="container">
-		<div class="main-content">
-			{{!-- begin: content --}}
-			{{> about-section }}
-			{{!-- end: content --}}
+	<div class="printing">
+		<div class="container-fluid">
+			{{> banner-content }}	
 		</div>
-	</main>
+		{{!-- begin: content container --}}
+		<main class="container">
+			<div class="main-content">
+				{{!-- begin: content --}}
+				{{> about-section }}
+				{{!-- end: content --}}
+			</div>
+		</main>
 
-	<div class="sub-content-printing">
-		{{> sub-content-printing }}
-	</div>
+		<div class="sub-content-printing">
+			{{> sub-content-printing }}
+		</div>
 
-	<div class="carousel-printing">
-		{{> carousel-printing }}
+		<div class="carousel-printing">
+			{{> carousel-printing }}
+		</div>
 	</div>
 
 	{{!-- end: content container --}}
+
+	{{> footer }}

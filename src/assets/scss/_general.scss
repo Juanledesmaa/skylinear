@@ -4,6 +4,8 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: $background-gray;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .no-pad {
@@ -60,6 +62,11 @@ p {
     margin-top: 40px;
 }
 
+.mt-negative {
+    margin-top: -90px;
+    margin-left: 15px;
+}
+
 .btn-wrapper {
     .btn-main {
         background-color: $color-default-blue;
@@ -75,4 +82,8 @@ p {
             background-color: $color-default-darkgray;
         }
     }
+}
+
+.top-content {
+    width: 100%;
 }

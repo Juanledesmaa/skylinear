@@ -1,0 +1,26 @@
+---
+
+active: { servicios: true }
+
+banner: { title: "Grabado Laser", description: "En SKYLINE nos especializamos en grabados láser sobre materiales como madera, metal, silicona, entre otros.", imageUrl: "/assets/img/banner_grabado_laser.jpg" }
+---
+	{{> navbar }}
+
+	<div class="grabados-laser">
+		<div class="container-fluid">
+			{{> banner-content }}	
+		</div>
+		{{!-- begin: content container --}}
+		<main class="container">
+			<div class="main-content">
+				{{!-- begin: content --}}
+				{{> about-section-laser }}
+
+				{{> carousel-laser }}
+				{{!-- end: content --}}
+			</div>
+		</main>
+	</div>
+	{{!-- end: content container --}}
+
+	{{> footer }}

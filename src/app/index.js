@@ -13,7 +13,7 @@ import 'bootstrap';
 import { applyPolyfills } from './base/polyfills';
 
 // Import methods from the base module
-import { consoleErrorFix, ieViewportFix, setupCarousel, setupNavbar, setupMainBannerCarousel } from './base/base';
+import { consoleErrorFix, ieViewportFix, setupCarousel, setupNavbar, setupMainBannerCarousel, setupFilterImageGallery, cyclePrintBanner } from './base/base';
 
 // Import our Sass entrypoint to create the CSS app bundle
 import '../assets/scss/index.scss';
@@ -27,6 +27,8 @@ $(async () => {
   setupCarousel();
   setupNavbar();
   setupMainBannerCarousel();
+  setupFilterImageGallery();
+  cyclePrintBanner();
 
   console.log('YaY, my first ES6-Module !!!!');
 });

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-dark sidebarNavigation" data-sidebarClass="navbar-dark">
         <div class="container">
-        <a class="navbar-brand" href="#"><img src="assets/img/logo_home.png" alt="" class="logo"></a>
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo_home.png" alt="" class="logo"></a>
         <button class="navbar-toggler leftNavbarToggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,18 +8,18 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="nav navbar-nav nav-flex-icons ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item {{#if active.index}}active{{/if}}">
                     <a class="nav-link" href="index.html">Inicio
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown {{#if active.servicios}}active{{/if}}">
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Servicios</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         <a class="dropdown-item" href="printing.html">Impresiones</a>
-                        <a class="dropdown-item" href="#">Grabado Laser</a>
-                        <a class="dropdown-item" href="#">Desarrollo Web</a>
+                        <a class="dropdown-item" href="grabados-laser.html">Grabado Laser</a>
+                        <a class="dropdown-item" href="desarrollo-web.html">Desarrollo Web</a>
                     </div>
                 </li>
 
@@ -28,22 +28,38 @@
                     <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Productos</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="category-products.html">Bazar</a>
+                        <a class="dropdown-item" href="category-products.html">Bolígrafos</a>
+                        <a class="dropdown-item" href="category-products.html">Escritorio</a>
+                        <a class="dropdown-item" href="category-products.html">Herramientas</a>
+                        <a class="dropdown-item" href="category-products.html">Indumentaria</a>
+                        <a class="dropdown-item" href="category-products.html">Marroquinería</a>
+                        <a class="dropdown-item" href="category-products.html">Promocionales</a>
+                        <a class="dropdown-item" href="category-products.html">Publicitarios</a>
+                        <a class="dropdown-item" href="category-products.html">Sublimación</a>
+                        <a class="dropdown-item" href="category-products.html">Tecnologia</a>
                     </div>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
+                <li class="nav-item {{#if active.galeria}}active{{/if}}">
+                    <a class="nav-link" href="galeria.html">Galeria</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {{#if active.contact}}active{{/if}}">
                     <a class="nav-link" href="contact.html">Contacto</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="sign">
+                        <a href="https://api.whatsapp.com/send?phone=5491153837665&text=Hola%20Skyline,%20Queria%20pedir%20mas%20informacion%20acerca%20de%20sus%20productos." target="_blank">
+                            <img src="assets/img/whatsapp-transparent.png" alt="">
+                        </a>
+                        
+                    </div>
                 </li>
             </ul>
            <!--  <form class="form-inline my-2 my-lg-0">
