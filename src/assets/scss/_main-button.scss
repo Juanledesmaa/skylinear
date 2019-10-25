@@ -11,6 +11,10 @@
         background-color: $color-default-blue;
         border: none;
         font-weight: 600;
+
+        &:focus {
+            outline: 0;
+        }
     }
 
     .btn--animated {

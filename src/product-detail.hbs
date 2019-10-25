@@ -1,6 +1,8 @@
 ---
 active: { index: true }
 
+page: { title: "Productos" }
+
 itemSkyline: [
 {itemImg: "/assets/img/contanos.png", itemTitle: "Contanós que necesitás", itemDescription: 'Elegí el/los articulos de tu preferencia y clickea "Añadir a mi cotizacion"'},
 {itemImg: "/assets/img/envio.png", itemTitle: "Envió de cotización", itemDescription: "Nuestros ejecutivos de venta te enviaran la cotización solicitada a un mail con los precios, plazos de entrega y forma de pago"},
@@ -9,6 +11,7 @@ itemSkyline: [
 ]
 ---
 	{{> navbar }}
+	{{> page-title }}
 
 	{{!-- begin: content container --}}
 	{{> product }}

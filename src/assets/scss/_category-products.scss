@@ -1,4 +1,8 @@
 .category {
+    .main-content {
+        padding-top: 10px;
+    }
+
     .single-product {
         text-align: center;
         margin-bottom: 50px;
@@ -8,46 +12,52 @@
             overflow: hidden;
 
             .p_icon {
-                width: 90%;
-                padding: 7px 30px;
+                padding: 15px;
                 position: absolute;
                 bottom: -100px;
-                left: 50%;
-                background: rgba($primary-color, 0.4);
                 transition: all 400ms ease;
+                width: 100%;
 
                 a {
                     display: inline-block;
-                    height: 36px;
+                    height: 40px;
                     line-height: 40px;
-                    width: 36px;
+                    width: 40px;
                     text-align: center;
-                    background: #fff;
-                    border-radius: 30px;
-                    color: $title-color;
+                    background-color: $color-default-darkgray;
+                    border-radius: 50%;
+                    color: #fff;
                     margin-right: 25px;
+
                     &:last-child {
                         margin-right: 0px;
                     }
                     &:hover {
                         color: #fff;
-                        background: $primary-color;
+                        background: $color-default-blue;
                     }
                 }
             }
         }
 
         .product-btm {
-            padding: 22px 25px 18px;
+            padding: 15px;
             border: 1px solid #f0f2f1;
-            text-align: left;
+            background-color: $color-default-darkgray;
+            min-height: 100px;
 
             h4 {
-                color: #4a4a4a;
-                font-size: 14px;
-                font-weight: 400;
-                text-transform: uppercase;
+                text-align: center;
+                color: #fff;
+                font-size: 18px;
+                text-transform: capitalize;
                 margin-bottom: 0px;
+                text-decoration: none;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: none !important;
+                }
             }
 
             h5 {
@@ -74,7 +84,7 @@
 
             .product-btm {
                 h4 {
-                    color: $primary-color;
+                    color: $color-default-blue;
                 }
             }
         }
@@ -157,7 +167,6 @@
 
     .left_widgets {
         margin-bottom: 30px;
-        border: 1px solid #eff2f3;
 
         &:last-child {
             margin-bottom: 0px;
@@ -174,25 +183,16 @@
     .l_w_title {
         padding-left: 30px;
         padding-right: 30px;
+        background-color: $color-default-blue;
 
         h3 {
             margin-bottom: 20px;
-            margin-top: 20px;
             font-size: 18px;
-            color: $title-color;
+            color: #fff;
             font-weight: 500;
             line-height: 40px;
             position: relative;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                height: 1px;
-                background: $primary-color;
-            }
+            text-transform: none;
         }
     }
     
@@ -305,9 +305,22 @@
         background: $offwhite;
         clear: both;
         display: flex;
-        padding: 10px 20px;
 
         .left_dorp {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .main-button {
+                display: inline-block;
+
+                .btn-read {
+                    padding: 8px;
+                    text-transform: uppercase;
+                }
+            }
+
             .sorting {
                 display: inline-block;
                 clear: none;
