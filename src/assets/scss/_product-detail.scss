@@ -294,7 +294,16 @@
         display: flex;
         padding: 10px 20px;
 
+        .btn-read {
+            padding: 8px;
+            text-transform: uppercase;
+        }
+
         .left_dorp {
+            justify-content: flex-end;
+            display: flex;
+            width: 100%;
+
             .sorting {
                 display: inline-block;
                 clear: none;
