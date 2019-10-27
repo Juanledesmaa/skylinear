@@ -309,8 +309,8 @@
         .left_dorp {
             width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            align-items: right;
+            justify-content: flex-end;
 
             .main-button {
                 display: inline-block;
