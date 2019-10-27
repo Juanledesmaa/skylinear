@@ -177,3 +177,48 @@ export function cyclePrintBanner() {
     }, 7000);
   });
 }
+
+let currentImageIndex = 1;
+let maxImageIndex = 1;
+
+export function openModalGallery() {
+  $(".gallery img").on("click", function() {
+    const imageName = $(this).attr('src');
+
+    currentImageIndex = Number($(this).data("img"));
+    maxImageIndex = $('.gallery .gallery_product').length;
+
+    $('.gallery .mySlides img').attr("src", imageName);
+    
+    $('.gallery #myModal').show();
+
+  });
+}
+
+export function closeModalGallery() {
+  $(".gallery #myModal .close.cursor").on("click", function() {
+    $('.gallery #myModal').hide();
+  });
+}
+
+export function plusSlidesGallery() {
+  $(".gallery #myModal .next").on("click", function() {
+    if (currentImageIndex < maxImageIndex) {
+      currentImageIndex++;
+      $('.gallery #myModal img').hide();
+      $('.gallery .mySlides img').attr("src", "assets/img/gallery/" + currentImageIndex  + ".jpg");
+      $('.gallery #myModal img').show();
+    }
+  });
+}
+
+export function currentSlideGallery() {
+  $(".gallery #myModal .prev").on("click", function() {
+    if (currentImageIndex > 1) {
+      currentImageIndex--;
+      $('.gallery #myModal img').hide();
+      $('.gallery .mySlides img').attr("src", "assets/img/gallery/" + currentImageIndex  + ".jpg");
+      $('.gallery #myModal img').show();
+    }
+  });
+}

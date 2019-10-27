@@ -87,3 +87,20 @@ p {
 .top-content {
     width: 100%;
 }
+
+.img-hover-zoom {
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+.img-hover-zoom {
+    img {
+        transition: all .6s ease;
+    }
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.5);
+    z-index: 9999;
+}
+  
