@@ -1,0 +1,93 @@
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+
+@include for-phone-only {
+    .bardhe ul {
+        display: inline-block;
+        text-align: left;
+        margin-left: 20px;
+
+        li {
+            margin: 10px 0;
+        }
+    }
+
+    .secondary-banner {
+        margin-top: 40px;
+    }
+
+    #about-us .title h2 {
+        width: 100%;
+    }
+
+    #carousel-section .carousel-control-next {
+        right: 0;
+    }
+
+    #carousel-section .carousel-control-prev {
+        left: 0;
+    }
+
+    .carousel-item {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .carousel-item-next, .carousel-item-prev {
+        position: absolute;
+    }
+
+    #carousel-section .title h2 {
+        width: 100%;
+    }
+
+    .banner-content .banner-content-img .text-wrapper {
+        margin-top: 220px;
+    }
+
+    .printing .about-section .title h2 {
+        width: 100%;
+    }
+
+    .sidebarNavigation {
+        height: 80px;
+    }
+
+    .site-header .topbar-outer {
+        display: none;
+    }
+
+    #buy-at-skyline .title h2 {
+        width: 100%;
+    }
+
+    .footer #footer {
+        padding-top: 0;
+    }
+
+    .newsletter {
+        margin-top: 30px;
+    }
+
+    .footer {
+        .bardhe ul {
+            margin: 0;
+        }
+    }
+}
+
