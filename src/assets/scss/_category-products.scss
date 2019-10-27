@@ -88,7 +88,7 @@
         .product-btm {
             padding: 15px;
             border: 1px solid #f0f2f1;
-            background-color: $color-default-darkgray;
+            background-color: $color-default-blue;
             min-height: 100px;
 
             h4 {
@@ -129,7 +129,8 @@
 
             .product-btm {
                 h4 {
-                    color: $color-default-blue;
+                    transition: all 0.33s ease;
+                    color: $color-default-darkgray;
                 }
             }
         }

@@ -108,15 +108,15 @@ export function setupNavbar() {
 }
 
 export function setupMainBannerCarousel() {
-  $('#myCarousel').carousel({
-    interval: 30000000
- });
+//   $('#myCarousel').carousel({
+//     interval: 30000000
+//  });
 
- $('#carousel-section #carousel-example').carousel({
-    interval: 5000,
-    pause: "hover",
-    wrap: true
-  });
+//  $('#carousel-section #carousel-example').carousel({
+//     interval: 5000,
+//     pause: "hover",
+//     wrap: true
+//   });
 
   $('#carousel-section #carousel-example').on('slide.bs.carousel', function (e) {
     const $e = $(e.relatedTarget);
@@ -219,6 +219,24 @@ export function currentSlideGallery() {
       $('.gallery #myModal img').hide();
       $('.gallery .mySlides img').attr("src", "assets/img/gallery/" + currentImageIndex  + ".jpg");
       $('.gallery #myModal img').show();
+    }
+  });
+}
+
+export function addProductCotizacion() {
+  $(".product-detail .qty-change.plus").on("click", function() {
+    let number = Number($(".product-detail .qty-input").val());
+    number++;
+    $(".product-detail .qty-input").val(number);
+  });
+}
+
+export function removeProductCotizacion() {
+  $(".product-detail .qty-change.minus").on("click", function() {
+    let number = Number($(".product-detail .qty-input").val());
+    if (number > 1) {
+      number--;
+      $(".product-detail .qty-input").val(number);
     }
   });
 }

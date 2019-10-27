@@ -44,11 +44,13 @@
                             font-family: $body-font;
                             margin-bottom: 0px;
                         }
+
                         .product_count {
                             margin-bottom: 0px;
+
                             input {
                                 width: 100px;
-                                padding-left: 30px;
+                                text-align: center;
                                 height: 40px;
                                 outline: none;
                                 box-shadow: none;
@@ -221,13 +223,38 @@
                     }
                     &.out_button_area {
                         .checkout_btn_inner {
-                            margin-left: -388px;
+                            
                             .main_btn {
-                                height: 40px;
-                                padding: 0px 30px;
-                                line-height: 38px;
+                                text-decoration: none;
+                                color: #fff;
+                                display: inline-block;
+                                background-color: #25d366;
+                                padding: 8px;
+                                font-size: 12px;
                                 text-transform: uppercase;
+                                border: 0;
+                                font-weight: bold;
                             }
+
+                            .botao-wpp {
+                                text-decoration: none;
+                                color: #fff;
+                                display: inline-block;
+                                background-color: #25d366;
+                                padding: 8px 16px;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                border: 0;
+                                font-weight: bold;
+                              }
+                    
+                              .botao-wpp:hover {
+                                background-color: darken(#25d366, 5%);
+                              }
+                              
+                              .botao-wpp:focus {
+                                background-color: darken(#25d366, 15%);
+                              }
                         }
                     }
                 }
