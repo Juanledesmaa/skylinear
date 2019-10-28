@@ -35,12 +35,12 @@
         background: $color-default-blue;
         text-align: center;
         color: #fff;
-        border-radius: 0 5px 5px 0;
+        border-radius: 0;
         cursor: pointer;
         font-size: 20px;
     }
 
-    .wrap{
+    .wrap {
         width: 60%;
         position: absolute;
         top: 0;
@@ -89,7 +89,15 @@
             padding: 15px;
             border: 1px solid #f0f2f1;
             background-color: $color-default-blue;
-            min-height: 100px;
+            min-height: 80px;
+            max-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .d-block {
+                text-decoration: none;
+            }
 
             h4 {
                 text-align: center;
@@ -217,15 +225,29 @@
         &:last-child {
             margin-bottom: 0px;
         }
+
+        ul {
+            list-style: none;
+        }
     }
     
     .widgets_inner {
-        padding-left: 30px;
-        padding-right: 30px;
         padding-top: 0px;
         padding-bottom: 15px;
+
+        .list {
+            padding-left: 0;
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    color: #000;
+                }
+            }
+        }
     }
-    
+
     .l_w_title {
         padding-left: 30px;
         padding-right: 30px;
@@ -264,35 +286,10 @@
                     position: relative;
 
                     &::before {
-                        content: "";
-                        height: 10px;
-                        width: 10px;
-                        border-radius: 50%;
-                        border: 1px solid $text-color;
-                        position: absolute;
-                        left: 0px;
-                        top: 4px;
-                    }
-
-                    &::after {
-                        content: "";
-                        height: 4px;
-                        width: 4px;
-                        background: #fff;
-                        border-radius: 50%;
-                        position: absolute;
-                        left: 3px;
-                        top: 8px;
-                    }
-                }
-
-                &.active,
-                &:hover {
-                    a {
-                        &::before {
-                            background: $primary-color;
-                            border-color: $primary-color;
-                        }
+                        content: "\f105";
+                        font-size: 15px;
+                        font-family: 'Fontawesome';
+                        margin-right: 10px;
                     }
                 }
 
