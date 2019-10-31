@@ -427,6 +427,53 @@
     .s_product_text {
         margin-left: 20px;
 
+        .colors {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            margin-bottom: 20px;
+
+            h4 {
+                margin-bottom: 20px;
+            }
+
+            .colors-list {
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                border-left: 10px solid transparent;
+                margin-bottom: 10px;
+
+                li {
+                    padding-right: 20px;
+
+                    .color {
+                        position: relative;
+                        line-height: normal;
+                        overflow: hidden;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        height: 20px;
+                        width: 20px;
+
+                        img {
+                            height: 22px;
+                            width: 22px;
+                        }
+                    }
+                }
+            }
+        }
+
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
