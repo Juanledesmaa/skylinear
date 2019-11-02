@@ -73,8 +73,7 @@ export function setupCarousel() {
         for (let i = 0; i < it; i++) {
             if (e.direction === "left") {
                 $('.primary-banner .carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
+            } else {
                 $('.primary-banner .carousel-item').eq(0).appendTo('.carousel-inner');
             }
         }
@@ -100,9 +99,11 @@ export function setupNavbar() {
   });
   $(window).resize(function() {
     if ($(".navbar-toggler").is(":hidden")) {
-      $(".sideMenu, .overlay").hide()
+      $(".sideMenu, .overlay").hide();
+      $("body").removeClass('overflow-hidden');
     } else {
-      $(".sideMenu, .overlay").show()
+      $(".sideMenu, .overlay").show();
+      $("body").addClass('overflow-hidden');
     }
   })
 }
@@ -178,15 +179,9 @@ export function cyclePrintBanner() {
   });
 }
 
-let currentImageIndex = 1;
-let maxImageIndex = 1;
-
 export function openModalGallery() {
   $(".gallery img").on("click", function() {
     const imageName = $(this).attr('src');
-
-    currentImageIndex = Number($(this).data("img"));
-    maxImageIndex = $('.gallery .gallery_product').length;
 
     $('.gallery .mySlides img').attr("src", imageName);
     
@@ -199,14 +194,30 @@ export function closeModalGallery() {
   $(".gallery #myModal .close.cursor").on("click", function() {
     $('.gallery #myModal').hide();
   });
+
+  $(document).on('keydown', function(event) {
+
+    if (event.key === "Escape") {
+      console.log("Se presiono escape");
+      if ($('.gallery #myModal').length) {
+        $('.gallery #myModal').hide();
+      }
+    }
+  });
 }
 
 export function plusSlidesGallery() {
   $(".gallery #myModal .next").on("click", function() {
-    if (currentImageIndex < maxImageIndex) {
-      currentImageIndex++;
+    const actualImage = $(this).siblings(".mySlides").find('img').attr("src");
+    const imageToFind = $('.gallery').find(`img[src$='${actualImage}']`).parent('.gallery_product').next('.gallery_product').find('img').attr('src');
+    const firstImage = $('.gallery').find('.gallery_product:first-child img').attr("src");
+    if (imageToFind) {
       $('.gallery #myModal img').hide();
-      $('.gallery .mySlides img').attr("src", "assets/img/gallery/" + currentImageIndex  + ".jpg");
+      $('.gallery .mySlides img').attr("src", imageToFind);
+      $('.gallery #myModal img').show();
+    } else {
+      $('.gallery #myModal img').hide();
+      $('.gallery .mySlides img').attr("src", firstImage);
       $('.gallery #myModal img').show();
     }
   });
@@ -214,10 +225,16 @@ export function plusSlidesGallery() {
 
 export function currentSlideGallery() {
   $(".gallery #myModal .prev").on("click", function() {
-    if (currentImageIndex > 1) {
-      currentImageIndex--;
+    const actualImage = $(this).siblings(".mySlides").find('img').attr("src");
+    const imageToFind = $('.gallery').find(`img[src$='${actualImage}']`).parent('.gallery_product').prev('.gallery_product').find('img').attr('src');
+    const lastImage = $('.gallery').find('.gallery_product:last-child img').attr("src");
+    if (imageToFind) {
       $('.gallery #myModal img').hide();
-      $('.gallery .mySlides img').attr("src", "assets/img/gallery/" + currentImageIndex  + ".jpg");
+      $('.gallery .mySlides img').attr("src", imageToFind);
+      $('.gallery #myModal img').show();
+    } else {
+      $('.gallery #myModal img').hide();
+      $('.gallery .mySlides img').attr("src", lastImage);
       $('.gallery #myModal img').show();
     }
   });
@@ -238,5 +255,13 @@ export function removeProductCotizacion() {
       number--;
       $(".product-detail .qty-input").val(number);
     }
+  });
+}
+
+export function buttonNavbarResponsive() {
+  $(document).ready(function () {
+    $(document).on('click', '.cta', function () {
+      $(this).toggleClass('active')
+    })
   });
 }

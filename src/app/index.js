@@ -13,7 +13,7 @@ import 'bootstrap';
 import { applyPolyfills } from './base/polyfills';
 
 // Import methods from the base module
-import { consoleErrorFix, ieViewportFix, setupCarousel, setupNavbar, setupMainBannerCarousel, setupFilterImageGallery, cyclePrintBanner, openModalGallery, closeModalGallery, plusSlidesGallery, currentSlideGallery, addProductCotizacion, removeProductCotizacion } from './base/base';
+import { consoleErrorFix, ieViewportFix, setupCarousel, setupNavbar, setupMainBannerCarousel, setupFilterImageGallery, cyclePrintBanner, openModalGallery, closeModalGallery, plusSlidesGallery, currentSlideGallery, addProductCotizacion, removeProductCotizacion, buttonNavbarResponsive } from './base/base';
 
 // Import our Sass entrypoint to create the CSS app bundle
 import '../assets/scss/index.scss';
@@ -35,6 +35,7 @@ $(async () => {
   currentSlideGallery();
   addProductCotizacion();
   removeProductCotizacion();
+  buttonNavbarResponsive();
 
   console.log('YaY, my first ES6-Module !!!!');
 });
