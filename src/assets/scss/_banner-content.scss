@@ -52,7 +52,6 @@
 
 .printing {
     .banner-content-img {
-       background-image: url(/assets/img/banner_impresiones_plotter.jpg);
        transition: background-image 2s ease-in-out;
     }
 }
@@ -60,13 +59,11 @@
 .grabados-laser {
     .banner-content-img {
         transition: background-image 2s ease-in-out;
-        background-image: url(/assets/img/banner_grabado_laser.jpg);
     }
 }
 
 .desarrollo-web {
     .banner-content-img {
         transition: background-image 2s ease-in-out;
-        background-image: url(/assets/img/banner_desarrollo_web.jpg);
     }
 }
