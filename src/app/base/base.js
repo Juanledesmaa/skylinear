@@ -100,10 +100,8 @@ export function setupNavbar() {
   $(window).resize(function() {
     if ($(".navbar-toggler").is(":hidden")) {
       $(".sideMenu, .overlay").hide();
-      $("body").removeClass('overflow-hidden');
     } else {
       $(".sideMenu, .overlay").show();
-      $("body").addClass('overflow-hidden');
     }
   })
 }
