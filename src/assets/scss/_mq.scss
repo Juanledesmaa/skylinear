@@ -14,6 +14,15 @@
     @media (min-width: 1800px) { @content; }
 }
 
+@include for-tablet-landscape-up {
+    .search-item {
+        display: unset;
+
+        &.responsive {
+            display: none;
+        }
+    }
+}
 
 @include for-phone-only {
     .bardhe ul {
@@ -442,7 +451,12 @@
     }
 
     .sign {
-        display: none;
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-top: 20px;
+        }
     }
 
     .footer #footer .list-inline.payment {
@@ -471,6 +485,12 @@
     }
 
     .search-item {
+        display: none;
+
+        &.responsive {
+            display: unset;
+        }
+
         input {
             margin: auto;
             width: 100%;
