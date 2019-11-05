@@ -448,5 +448,61 @@
     .footer #footer .list-inline.payment {
         margin-top: 56px !important;
     }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 28px;
+        font-weight: 400;
+        font-family: 'Rubik', sans-serif !important;
+        color: #fff;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        position: relative;
+        line-height: 28px;
+        padding: 0;
+        margin-top: 20px;
+        padding-bottom: 5px;
+    }
+
+    .navbar-light .navbar-nav .nav-item.active {
+        .nav-link {
+            border-bottom: 3px solid black;
+        }
+    }
+
+    .search-item {
+        input {
+            margin: auto;
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: none;
+            background: #fff;
+            color: #1d1c21;
+            text-shadow: 0 0 10px #fff;
+            padding: 0 30px 0 20px;
+            border-radius: 30px;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            font-weight: bolder;
+            letter-spacing: 0.1em;
+            z-index: 99999999;
+            margin-top: 20px;
+        }
+    }
+
+    .dropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        top: 10px;
+        right: -25px;
+        position: absolute;
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+    }
 }
 

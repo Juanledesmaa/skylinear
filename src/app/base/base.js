@@ -89,12 +89,15 @@ export function setupNavbar() {
     $(".sideMenu, .overlay").toggleClass("open");
     $(".overlay").on("click", function() {
       $(this).removeClass("open");
-      $(".sideMenu").removeClass("open")
+      $(".sideMenu").removeClass("open");
+      $('.cta').removeClass('active');
+      $('body').removeClass('overflow-hidden');
     })
   });
   $("body").on("click", ".sideMenu.open .nav-item", function() {
     if (!$(this).hasClass("dropdown")) {
-      $(".sideMenu, .overlay").toggleClass("open")
+      $(".sideMenu, .overlay").removeClass("open");
+      $('body').addClass('overflow-hidden');
     }
   });
   $(window).resize(function() {
@@ -260,6 +263,7 @@ export function buttonNavbarResponsive() {
   $(document).ready(function () {
     $(document).on('click', '.cta', function () {
       $(this).toggleClass('active')
-    })
+      $('body').toggleClass('overflow-hidden');
+    });
   });
 }
