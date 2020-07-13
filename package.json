@@ -133,7 +133,7 @@
     "purifycss-webpack": "^0.7.0",
     "sass-loader": "^7.1.0",
     "serve": "^10.1.2",
-    "standard-version": "^5.0.2",
+    "standard-version": "^8.0.1",
     "style-loader": "^0.23.1",
     "stylelint": "^9.10.1",
     "stylelint-config-prettier": "^5.0.0",
